@@ -79,24 +79,4 @@ public class PetLoveDAO {
 			AccessToDb.closeFactory();
 		}
 	}
-
-//	// Get pet love by user id
-//	public PetLove getPetLoveByUserId(int userId) throws ErrorInProcessPetLove {
-//		try {
-//			// access to DB
-//			EntityManager em = AccessToDb.createFactory();
-//
-//			PetLove petLove = new PetLove();
-//			Query q = em.createNamedQuery("LoveByUserId", PetLove.class).setParameter("userId", userId);
-//
-//			if (q.getFirstResult() != 0)
-//				petLove = (PetLove) q.getSingleResult();
-//
-//			return petLove;
-//		} catch (Exception e) {
-//			throw new ErrorInProcessPetLove("Error in process pet love data");
-//		} finally {
-//			AccessToDb.closeFactory();
-//		}
-//	}
 }

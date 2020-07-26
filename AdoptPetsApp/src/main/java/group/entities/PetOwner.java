@@ -10,8 +10,6 @@ import javax.validation.constraints.*;
  *
  */
 @Entity
-@NamedQueries({
-		@NamedQuery(name = "PetOfOwner", query = "SELECT p FROM PetOwner o JOIN o.pet p WHERE o.petOwnerId = :petOwnerId") })
 public class PetOwner implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -47,7 +45,7 @@ public class PetOwner implements Serializable {
 	private int houseNumber;
 
 	// one to one relationship - To pet table
-	@OneToOne(mappedBy = "petOwner", optional = true)
+	@OneToOne(mappedBy = "petOwner")
 	private Pet pet;
 
 	public PetOwner() {
